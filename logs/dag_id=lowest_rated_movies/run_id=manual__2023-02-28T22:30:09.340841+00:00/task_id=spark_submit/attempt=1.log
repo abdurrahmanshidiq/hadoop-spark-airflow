@@ -1,0 +1,98 @@
+[2023-02-28 22:30:11,605] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: lowest_rated_movies.spark_submit manual__2023-02-28T22:30:09.340841+00:00 [queued]>
+[2023-02-28 22:30:11,611] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: lowest_rated_movies.spark_submit manual__2023-02-28T22:30:09.340841+00:00 [queued]>
+[2023-02-28 22:30:11,612] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-28 22:30:11,613] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2023-02-28 22:30:11,614] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-28 22:30:11,624] {taskinstance.py:1377} INFO - Executing <Task(SparkSubmitOperator): spark_submit> on 2023-02-28 22:30:09.340841+00:00
+[2023-02-28 22:30:11,629] {standard_task_runner.py:52} INFO - Started process 2711 to run task
+[2023-02-28 22:30:11,633] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'lowest_rated_movies', 'spark_submit', 'manual__2023-02-28T22:30:09.340841+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/lowest_rated_movies.py', '--cfg-path', '/tmp/tmpwjqzsq6s', '--error-file', '/tmp/tmpzl4qvz7x']
+[2023-02-28 22:30:11,636] {standard_task_runner.py:80} INFO - Job 3: Subtask spark_submit
+[2023-02-28 22:30:11,698] {task_command.py:370} INFO - Running <TaskInstance: lowest_rated_movies.spark_submit manual__2023-02-28T22:30:09.340841+00:00 [running]> on host 632641264a15
+[2023-02-28 22:30:11,769] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ayyoub
+AIRFLOW_CTX_DAG_ID=lowest_rated_movies
+AIRFLOW_CTX_TASK_ID=spark_submit
+AIRFLOW_CTX_EXECUTION_DATE=2023-02-28T22:30:09.340841+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-02-28T22:30:09.340841+00:00
+[2023-02-28 22:30:11,782] {spark_submit.py:223} INFO - Could not load connection string spark-hadoop, defaulting to yarn
+[2023-02-28 22:30:11,784] {spark_submit.py:344} INFO - Spark-Submit cmd: spark-submit --master yarn --name arrow-spark /hadoop-data/map_reduce/spark/lowest_rated_movies_spark.py
+[2023-02-28 22:30:13,878] {spark_submit.py:495} INFO - 23/02/28 22:30:13 INFO SparkContext: Running Spark version 3.3.2
+[2023-02-28 22:30:13,927] {spark_submit.py:495} INFO - 23/02/28 22:30:13 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2023-02-28 22:30:14,004] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO ResourceUtils: ==============================================================
+[2023-02-28 22:30:14,005] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2023-02-28 22:30:14,007] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO ResourceUtils: ==============================================================
+[2023-02-28 22:30:14,010] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO SparkContext: Submitted application: WorstMovies
+[2023-02-28 22:30:14,026] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2023-02-28 22:30:14,038] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO ResourceProfile: Limiting resource is cpus at 1 tasks per executor
+[2023-02-28 22:30:14,040] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2023-02-28 22:30:14,070] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO SecurityManager: Changing view acls to: ***
+[2023-02-28 22:30:14,071] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO SecurityManager: Changing modify acls to: ***
+[2023-02-28 22:30:14,072] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO SecurityManager: Changing view acls groups to:
+[2023-02-28 22:30:14,073] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO SecurityManager: Changing modify acls groups to:
+[2023-02-28 22:30:14,074] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(***); groups with view permissions: Set(); users  with modify permissions: Set(***); groups with modify permissions: Set()
+[2023-02-28 22:30:14,233] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO Utils: Successfully started service 'sparkDriver' on port 45065.
+[2023-02-28 22:30:14,251] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO SparkEnv: Registering MapOutputTracker
+[2023-02-28 22:30:14,273] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO SparkEnv: Registering BlockManagerMaster
+[2023-02-28 22:30:14,285] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2023-02-28 22:30:14,287] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2023-02-28 22:30:14,307] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2023-02-28 22:30:14,325] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-2db6ff32-7f00-4799-8b47-112f4dc98d76
+[2023-02-28 22:30:14,348] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2023-02-28 22:30:14,381] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO SparkEnv: Registering OutputCommitCoordinator
+[2023-02-28 22:30:14,634] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2023-02-28 22:30:14,943] {spark_submit.py:495} INFO - Traceback (most recent call last):
+[2023-02-28 22:30:14,945] {spark_submit.py:495} INFO - File "/hadoop-data/map_reduce/spark/lowest_rated_movies_spark.py", line 28, in <module>
+[2023-02-28 22:30:14,946] {spark_submit.py:495} INFO - sc = SparkContext.getOrCreate(conf = conf)
+[2023-02-28 22:30:14,947] {spark_submit.py:495} INFO - File "/opt/spark-3.3.2-bin-hadoop3/python/lib/pyspark.zip/pyspark/context.py", line 483, in getOrCreate
+[2023-02-28 22:30:14,949] {spark_submit.py:495} INFO - File "/opt/spark-3.3.2-bin-hadoop3/python/lib/pyspark.zip/pyspark/context.py", line 208, in __init__
+[2023-02-28 22:30:14,950] {spark_submit.py:495} INFO - File "/opt/spark-3.3.2-bin-hadoop3/python/lib/pyspark.zip/pyspark/context.py", line 282, in _do_init
+[2023-02-28 22:30:14,951] {spark_submit.py:495} INFO - File "/opt/spark-3.3.2-bin-hadoop3/python/lib/pyspark.zip/pyspark/context.py", line 402, in _initialize_context
+[2023-02-28 22:30:14,953] {spark_submit.py:495} INFO - File "/opt/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip/py4j/java_gateway.py", line 1586, in __call__
+[2023-02-28 22:30:14,953] {spark_submit.py:495} INFO - File "/opt/spark-3.3.2-bin-hadoop3/python/lib/py4j-0.10.9.5-src.zip/py4j/protocol.py", line 328, in get_return_value
+[2023-02-28 22:30:14,954] {spark_submit.py:495} INFO - py4j.protocol.Py4JJavaError: An error occurred while calling None.org.apache.spark.api.java.JavaSparkContext.
+[2023-02-28 22:30:14,955] {spark_submit.py:495} INFO - : java.lang.NoClassDefFoundError: org/apache/hadoop/shaded/javax/ws/rs/core/NoContentException
+[2023-02-28 22:30:14,956] {spark_submit.py:495} INFO - at org.apache.hadoop.yarn.util.timeline.TimelineUtils.<clinit>(TimelineUtils.java:60)
+[2023-02-28 22:30:14,957] {spark_submit.py:495} INFO - at org.apache.hadoop.yarn.client.api.impl.YarnClientImpl.serviceInit(YarnClientImpl.java:200)
+[2023-02-28 22:30:14,958] {spark_submit.py:495} INFO - at org.apache.hadoop.service.AbstractService.init(AbstractService.java:164)
+[2023-02-28 22:30:14,959] {spark_submit.py:495} INFO - at org.apache.spark.deploy.yarn.Client.submitApplication(Client.scala:191)
+[2023-02-28 22:30:14,960] {spark_submit.py:495} INFO - at org.apache.spark.scheduler.cluster.YarnClientSchedulerBackend.start(YarnClientSchedulerBackend.scala:62)
+[2023-02-28 22:30:14,961] {spark_submit.py:495} INFO - at org.apache.spark.scheduler.TaskSchedulerImpl.start(TaskSchedulerImpl.scala:222)
+[2023-02-28 22:30:14,962] {spark_submit.py:495} INFO - at org.apache.spark.SparkContext.<init>(SparkContext.scala:595)
+[2023-02-28 22:30:14,963] {spark_submit.py:495} INFO - at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+[2023-02-28 22:30:14,963] {spark_submit.py:495} INFO - at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+[2023-02-28 22:30:14,964] {spark_submit.py:495} INFO - at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+[2023-02-28 22:30:14,965] {spark_submit.py:495} INFO - at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+[2023-02-28 22:30:14,965] {spark_submit.py:495} INFO - at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+[2023-02-28 22:30:14,966] {spark_submit.py:495} INFO - at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+[2023-02-28 22:30:14,967] {spark_submit.py:495} INFO - at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+[2023-02-28 22:30:14,970] {spark_submit.py:495} INFO - at py4j.Gateway.invoke(Gateway.java:238)
+[2023-02-28 22:30:14,971] {spark_submit.py:495} INFO - at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+[2023-02-28 22:30:14,972] {spark_submit.py:495} INFO - at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+[2023-02-28 22:30:14,972] {spark_submit.py:495} INFO - at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+[2023-02-28 22:30:14,973] {spark_submit.py:495} INFO - at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+[2023-02-28 22:30:14,974] {spark_submit.py:495} INFO - at java.base/java.lang.Thread.run(Thread.java:829)
+[2023-02-28 22:30:14,975] {spark_submit.py:495} INFO - Caused by: java.lang.ClassNotFoundException: org.apache.hadoop.shaded.javax.ws.rs.core.NoContentException
+[2023-02-28 22:30:14,976] {spark_submit.py:495} INFO - at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+[2023-02-28 22:30:14,977] {spark_submit.py:495} INFO - at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+[2023-02-28 22:30:14,981] {spark_submit.py:495} INFO - at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+[2023-02-28 22:30:14,983] {spark_submit.py:495} INFO - ... 20 more
+[2023-02-28 22:30:14,984] {spark_submit.py:495} INFO - 
+[2023-02-28 22:30:14,991] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO DiskBlockManager: Shutdown hook called
+[2023-02-28 22:30:14,998] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO ShutdownHookManager: Shutdown hook called
+[2023-02-28 22:30:15,000] {spark_submit.py:495} INFO - 23/02/28 22:30:14 INFO ShutdownHookManager: Deleting directory /tmp/spark-5d16a260-f985-45ea-80b6-1ea661d14768
+[2023-02-28 22:30:15,002] {spark_submit.py:495} INFO - 23/02/28 22:30:15 INFO ShutdownHookManager: Deleting directory /tmp/spark-ad510d65-0fbb-4296-bd5f-69bacf2ed874/userFiles-14a55685-383d-4995-8494-b50fa88815f1
+[2023-02-28 22:30:15,006] {spark_submit.py:495} INFO - 23/02/28 22:30:15 INFO ShutdownHookManager: Deleting directory /tmp/spark-ad510d65-0fbb-4296-bd5f-69bacf2ed874
+[2023-02-28 22:30:15,565] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 157, in execute
+    self._hook.submit(self._application)
+  File "/usr/local/lib/python3.7/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 427, in submit
+    f"Cannot execute: {self._mask_cmd(spark_submit_cmd)}. Error code is: {returncode}."
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master yarn --name arrow-spark /hadoop-data/map_reduce/spark/lowest_rated_movies_spark.py. Error code is: 1.
+[2023-02-28 22:30:15,576] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=lowest_rated_movies, task_id=spark_submit, execution_date=20230228T223009, start_date=20230228T223011, end_date=20230228T223015
+[2023-02-28 22:30:15,595] {standard_task_runner.py:97} ERROR - Failed to execute job 3 for task spark_submit (Cannot execute: spark-submit --master yarn --name arrow-spark /hadoop-data/map_reduce/spark/lowest_rated_movies_spark.py. Error code is: 1.; 2711)
+[2023-02-28 22:30:15,652] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-02-28 22:30:15,709] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
